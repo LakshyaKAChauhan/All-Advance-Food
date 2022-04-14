@@ -3,11 +3,8 @@ package net.chauhanDevs.advance_modder.core.init;
 import net.chauhanDevs.advance_modder.common.items.cottage_cheese_packet;
 import net.chauhanDevs.advance_modder.common.items.packet;
 import net.chauhanDevs.advance_modder.food;
-import net.minecraft.world.food.FoodProperties;
-import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -20,7 +17,7 @@ public class food_in_packet {
             () -> new packet(blocks.PACKET.get(), new packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
     //Advance Food Packet Items
-    public static final RegistryObject<Item> COTTAGE_CHEESE_PACKET = FIP.register("cottage_cheese_packet",
-            () -> new cottage_cheese_packet(new cottage_cheese_packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
+    public static final RegistryObject<cottage_cheese_packet> COTTAGE_CHEESE_PACKET = FIP.register("cottage_cheese_packet",
+            () -> new cottage_cheese_packet(blocks.PACKET.get(), new cottage_cheese_packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
 }
