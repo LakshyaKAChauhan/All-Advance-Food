@@ -12,8 +12,10 @@ import net.minecraftforge.registries.RegistryObject;
 public class blocks {
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS,
             food.MOD_ID);
-
     public static final RegistryObject<Block> PACKET = BLOCKS.register("packet",
+            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
+                    .strength(0.1f, 0.6f).sound(SoundType.CROP)));
+    public static final RegistryObject<Block> COTTAGE_CHEESE_PACKET = BLOCKS.register("cottage_cheese_packet",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
                     .strength(0.1f, 0.6f).sound(SoundType.CROP)));
 }

@@ -15,9 +15,9 @@ public class foods {
     public static final DeferredRegister<Item> FOODS = DeferredRegister.create(ForgeRegistries.ITEMS,
             food.MOD_ID);
     public static final RegistryObject<Item> CHEESE_BURGER = FOODS.register("cheese_burger",
-            () -> new junk_food(new junk_food.Properties().tab(CreativeModeTab.TAB_FOOD)
+            () -> new junk_food(new Item.Properties().tab(CreativeModeTab.TAB_FOOD)
                     .food(new FoodProperties.Builder().effect(() -> new MobEffectInstance(effects.ENERGY.get(), 1400, 2),
                             2f)
                             .effect(() -> new MobEffectInstance(effects.TASTINESS.get(),
-                                    1300, 1), 0f).build())));
+                                    1300, 1), 0f).nutrition(10).build())));
 }

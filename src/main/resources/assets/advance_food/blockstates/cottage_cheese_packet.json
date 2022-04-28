@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "advance_food:block/cottage_cheese_packet", "y": 0   },
+    "facing=east":  { "model": "advance_food:block/cottage_cheese_packet", "y": 90  },
+    "facing=south": { "model": "advance_food:block/cottage_cheese_packet", "y": 180 },
+    "facing=west":  { "model": "advance_food:block/cottage_cheese_packet", "y": 270 }
+  }
+}www

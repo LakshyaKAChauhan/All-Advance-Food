@@ -18,6 +18,6 @@ public class food_in_packet {
 
     //Advance Food Packet Items
     public static final RegistryObject<cottage_cheese_packet> COTTAGE_CHEESE_PACKET = FIP.register("cottage_cheese_packet",
-            () -> new cottage_cheese_packet(blocks.PACKET.get(), new cottage_cheese_packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
+            () -> new cottage_cheese_packet(blocks.COTTAGE_CHEESE_PACKET.get(), new cottage_cheese_packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
 }
