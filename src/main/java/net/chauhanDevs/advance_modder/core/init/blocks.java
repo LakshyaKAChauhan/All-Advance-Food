@@ -18,4 +18,8 @@ public class blocks {
     public static final RegistryObject<Block> COTTAGE_CHEESE_PACKET = BLOCKS.register("cottage_cheese_packet",
             () -> new Block(BlockBehaviour.Properties.of(Material.PLANT)
                     .strength(0.1f, 0.6f).sound(SoundType.CROP)));
+
+    //BLOCKS
+    public static final RegistryObject<Block> PLATE = BLOCKS.register("plate",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)));
 }

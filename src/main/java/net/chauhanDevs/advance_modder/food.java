@@ -26,6 +26,7 @@ public class food
         food_in_packet.FIP.register(bus);
         blocks.BLOCKS.register(bus);
         effects.EFF.register(bus);
+        items.ITEM.register(bus);
     }
 
     private void setup(final FMLCommonSetupEvent event)

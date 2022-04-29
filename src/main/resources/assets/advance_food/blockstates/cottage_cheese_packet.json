@@ -5,4 +5,4 @@
     "facing=south": { "model": "advance_food:block/cottage_cheese_packet", "y": 180 },
     "facing=west":  { "model": "advance_food:block/cottage_cheese_packet", "y": 270 }
   }
-}www
+}
