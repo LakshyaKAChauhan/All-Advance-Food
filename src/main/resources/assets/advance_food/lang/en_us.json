@@ -1,0 +1,10 @@
+{
+  "item.advance_food.cheese_burger": "Cheese Burger",
+
+  "block.advance_food.french_fries": "French Fries",
+  "block.advance_food.e_french_fries_packet": "French Fries Packet",
+  "block.advance_food.plate": "Plate",
+
+  "itemGroup.f_items": "Food Items",
+  "itemGroup.utensils": "Utensils"
+}

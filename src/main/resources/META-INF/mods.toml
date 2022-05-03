@@ -3,17 +3,17 @@ loaderVersion="[39,)"
 license="All rights reserved"
 [[mods]] #mandatory
 modId="advance_food" #mandatory
-version="1.0.0" #mandatory
-displayName="Example Mod" #mandatory
-#updateJSONURL="https://change.me.example.invalid/updates.json" #optional
-# A URL for the "homepage" for this mod, displayed in the mod UI
-#displayURL="https://change.me.to.your.mods.homepage.example.invalid/" #optional
-# A file name (in the root of the mod JAR) containing a logo for display
-logoFile="bg.png" #optional
+version="1.1" #mandatory
+displayName="All Advance Food" #mandatory
+#updateJSONURL="https://change.me.example.invalid/updates.json"
+#displayURL="https://change.me.to.your.mods.homepage.example.invalid/"
+logoFile="burger.png" #optional
 credits="All The Credits Goes To LakshyaK2011"
 authors="LakshyaK2011"
 description='''
-    This is Advance
+Have You Ever Wanted to eat tasty things in minecraft?
+So This Mod Maybe your solution.
+This mod add variets of food Items In Minecraft.
 '''
 [[dependencies.advance_food]] #optional
     modId="forge" #mandatory

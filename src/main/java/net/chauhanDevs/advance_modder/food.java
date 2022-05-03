@@ -23,10 +23,11 @@ public class food
         //DeferredRegisters.ITEM.register(bus);
         foods.FOODS.register(bus);
         food_subingridients.SUB_I.register(bus);
-        food_in_packet.FIP.register(bus);
         blocks.BLOCKS.register(bus);
         effects.EFF.register(bus);
         items.ITEM.register(bus);
+        empty_packets.E_PACKET.register(bus);
+        food_in_packet.FIP.register(bus);
     }
 
     private void setup(final FMLCommonSetupEvent event)

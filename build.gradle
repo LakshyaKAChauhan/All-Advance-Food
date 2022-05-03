@@ -12,7 +12,7 @@ apply plugin: 'net.minecraftforge.gradle'
 apply plugin: 'eclipse'
 apply plugin: 'maven-publish'
 
-version = '1.0'
+version = '1.1'
 group = 'net.chauhanDevs.advance_modder'
 archivesBaseName = 'advance_food'
 
@@ -85,7 +85,7 @@ repositories {
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
-    //implementation fg.deobf('curse.maven:player-eating-animation-401448:3142500')
+    // fg.deobf('curse.maven:player-eating-animation-401448:3142500')
 }
 
 jar {
