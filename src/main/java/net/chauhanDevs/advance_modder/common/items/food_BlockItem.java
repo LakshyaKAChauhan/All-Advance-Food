@@ -1,5 +1,8 @@
 package net.chauhanDevs.advance_modder.common.items;
 
+import java.util.List;
+import java.util.Map;
+import javax.annotation.Nullable;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
@@ -27,35 +30,26 @@ import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.shapes.CollisionContext;
-import org.jetbrains.annotations.NotNull;
-
-import javax.annotation.Nullable;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
 
 public class food_BlockItem extends Item {
     private static final String BLOCK_ENTITY_TAG = "BlockEntityTag";
     public static final String BLOCK_STATE_TAG = "BlockStateTag";
+    /** @deprecated */
     @Deprecated
     private final Block block;
 
-    public food_BlockItem(Block block, Properties p) {
-        super(p);
-        this.block = block;
+    public food_BlockItem(Block p_40565_, Item.Properties p_40566_) {
+        super(p_40566_);
+        this.block = p_40565_;
     }
 
-    public @NotNull InteractionResult useOn(UseOnContext context) {
-        if(Objects.requireNonNull(context.getPlayer()).isCrouching()){
-            InteractionResult interactionresult = this.place(new BlockPlaceContext(context));
-            if (!interactionresult.consumesAction() && this.isEdible()) {
-                InteractionResult interactionresult1 = this.use(context.getLevel(), Objects.requireNonNull(context.getPlayer()), context.getHand()).getResult();
-                return interactionresult1 == InteractionResult.CONSUME ? InteractionResult.CONSUME_PARTIAL : interactionresult1;
-            } else {
-                return interactionresult;
-            }
-        }else{
-            return super.useOn(context);
+    public InteractionResult useOn(UseOnContext p_40581_) {
+        InteractionResult interactionresult = this.place(new BlockPlaceContext(p_40581_));
+        if (!interactionresult.consumesAction() && this.isEdible()) {
+            InteractionResult interactionresult1 = this.use(p_40581_.getLevel(), p_40581_.getPlayer(), p_40581_.getHand()).getResult();
+            return interactionresult1 == InteractionResult.CONSUME ? InteractionResult.CONSUME_PARTIAL : interactionresult1;
+        } else {
+            return interactionresult;
         }
     }
 
@@ -135,7 +129,7 @@ public class food_BlockItem extends Item {
             for(String s : compoundtag1.getAllKeys()) {
                 Property<?> property = statedefinition.getProperty(s);
                 if (property != null) {
-                    String s1 = Objects.requireNonNull(compoundtag1.get(s)).getAsString();
+                    String s1 = compoundtag1.get(s).getAsString();
                     blockstate = updateState(blockstate, property, s1);
                 }
             }
@@ -196,18 +190,18 @@ public class food_BlockItem extends Item {
         }
     }
 
-    public @NotNull String getDescriptionId() {
+    public String getDescriptionId() {
         return this.getBlock().getDescriptionId();
     }
 
-    public void fillItemCategory(@NotNull CreativeModeTab p_40569_, @NotNull NonNullList<ItemStack> p_40570_) {
+    public void fillItemCategory(CreativeModeTab p_40569_, NonNullList<ItemStack> p_40570_) {
         if (this.allowdedIn(p_40569_)) {
             this.getBlock().fillItemCategory(p_40569_, p_40570_);
         }
 
     }
 
-    public void appendHoverText(@NotNull ItemStack p_40572_, @Nullable Level p_40573_, @NotNull List<Component> p_40574_, @NotNull TooltipFlag p_40575_) {
+    public void appendHoverText(ItemStack p_40572_, @Nullable Level p_40573_, List<Component> p_40574_, TooltipFlag p_40575_) {
         super.appendHoverText(p_40572_, p_40573_, p_40574_, p_40575_);
         this.getBlock().appendHoverText(p_40572_, p_40573_, p_40574_, p_40575_);
     }
@@ -232,7 +226,7 @@ public class food_BlockItem extends Item {
         return !(this.block instanceof ShulkerBoxBlock);
     }
 
-    public void onDestroyed(@NotNull ItemEntity p_150700_) {
+    public void onDestroyed(ItemEntity p_150700_) {
         if (this.block instanceof ShulkerBoxBlock) {
             ItemStack itemstack = p_150700_.getItem();
             CompoundTag compoundtag = getBlockEntityData(itemstack);

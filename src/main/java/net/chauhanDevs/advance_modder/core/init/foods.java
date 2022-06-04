@@ -19,5 +19,5 @@ public class foods {
                     .food(new FoodProperties.Builder().effect(() -> new MobEffectInstance(effects.ENERGY.get(), 1400, 2),
                             2f)
                             .effect(() -> new MobEffectInstance(effects.TASTINESS.get(),
-                                    1300, 1), 0f).nutrition(10).build())));
+                                    1300, 1), 2f).nutrition(10).build()), 1));
 }

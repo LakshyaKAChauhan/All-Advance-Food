@@ -1,6 +1,8 @@
 package net.chauhanDevs.advance_modder.core.init;
 
+import net.chauhanDevs.advance_modder.common.blocks.eatable_f_packet_block;
 import net.chauhanDevs.advance_modder.common.blocks.plate;
+import net.chauhanDevs.advance_modder.common.blocks.test_block;
 import net.chauhanDevs.advance_modder.food;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
@@ -19,12 +21,14 @@ public class blocks {
 
     //BLOCKS
     public static final RegistryObject<plate> PLATE = BLOCKS.register("plate",
-            () -> new plate(BlockBehaviour.Properties.of(Material.STONE).noOcclusion()));
+            () -> new plate(BlockBehaviour.Properties.of(Material.STONE).noOcclusion().noCollission()));
 
+    public static final RegistryObject<test_block> TEST = BLOCKS.register("test",
+            () -> new test_block(BlockBehaviour.Properties.of(Material.BAMBOO)));
     //FOOD ITEMS
-    public static final RegistryObject<Block> FRENCH_FRIES = BLOCKS.register("french_fries",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion()));
+    public static final RegistryObject<eatable_f_packet_block> FRENCH_FRIES = BLOCKS.register("french_fries",
+            () -> new eatable_f_packet_block(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().noCollission()));
     //EMPTY PACKETS
     public static final RegistryObject<Block> E_FRENCH_FRIES_PACKET = BLOCKS.register("e_french_fries_packet",
-            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion()));
+            () -> new Block(BlockBehaviour.Properties.of(Material.PLANT).noOcclusion().noCollission()));
 }

@@ -80,12 +80,15 @@ minecraft {
 sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 repositories {
-
+    maven{
+        url = "https://www.cursemaven.com"
+    }
 }
 
 dependencies {
     minecraft 'net.minecraftforge:forge:1.18.1-39.1.0'
-    // fg.deobf('curse.maven:player-eating-animation-401448:3142500')
+    //fg.deobf('curse.maven:player-eating-animation-401448:3142500')
+    implementation fg.deobf('curse.maven:mrcrayfish-furniture-mod-55438:3616801')
 }
 
 jar {

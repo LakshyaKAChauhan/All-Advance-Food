@@ -17,7 +17,7 @@ public abstract class tabs extends CreativeModeTab {
     public static final tabs F_ITEMS = new tabs(CreativeModeTab.TABS.length, "f_items"){
         @OnlyIn(Dist.CLIENT)
         @Override
-        public @NotNull ItemStack makeIcon(){return new ItemStack(items.PLATE.get());}
+        public @NotNull ItemStack makeIcon(){return new ItemStack(foods.CHEESE_BURGER.get());}
     };
     public tabs(int p_i1853_1_, String p_i1853_2_) {
         super(p_i1853_1_, p_i1853_2_);

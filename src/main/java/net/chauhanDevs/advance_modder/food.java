@@ -21,10 +21,10 @@ public class food
         bus.addListener(this::setup);
         MinecraftForge.EVENT_BUS.register(this);
         //DeferredRegisters.ITEM.register(bus);
-        foods.FOODS.register(bus);
-        food_subingridients.SUB_I.register(bus);
         blocks.BLOCKS.register(bus);
         effects.EFF.register(bus);
+        foods.FOODS.register(bus);
+        food_subingridients.SUB_I.register(bus);
         items.ITEM.register(bus);
         empty_packets.E_PACKET.register(bus);
         food_in_packet.FIP.register(bus);

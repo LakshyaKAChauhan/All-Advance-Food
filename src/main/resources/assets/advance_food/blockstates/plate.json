@@ -1,5 +1,10 @@
 {
   "variants": {
-    "": { "model": "advance_food:block/plate" }
+    "food=1,is_with_packet=false": { "model": "advance_food:block/plate" },
+    "food=1,is_with_packet=true": { "model": "advance_food:block/plate" },
+    "food=2,is_with_packet=false": { "model": "advance_food:plate_types/plate_burger" },
+    "food=2,is_with_packet=true": { "model": "advance_food:plate_types/plate_burger" },
+    "food=3,is_with_packet=false": { "model": "advance_food:plate_types/plate_french_fries" },
+    "food=3,is_with_packet=true": { "model": "advance_food:plate_types/plate_french_fries_wp" }
   }
 }

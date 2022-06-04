@@ -1,0 +1,12 @@
+Stream.of(
+Block.makeCuboidShape(5, 1, 11, 11, 9, 12),
+Block.makeCuboidShape(5, 1, 4, 11, 9, 5),
+Block.makeCuboidShape(11, 1, 5, 12, 9, 11),
+Block.makeCuboidShape(4, 1, 5, 5, 9, 11),
+Block.makeCuboidShape(5, 0, 5, 11, 4, 11),
+Block.makeCuboidShape(5, 1, 11, 11, 9, 12),
+Block.makeCuboidShape(5, 1, 4, 11, 9, 5),
+Block.makeCuboidShape(11, 1, 5, 12, 9, 11),
+Block.makeCuboidShape(4, 1, 5, 5, 9, 11),
+Block.makeCuboidShape(5, 0, 5, 11, 4, 11)
+).reduce((v1, v2) -> VoxelShapes.combineAndSimplify(v1, v2, IBooleanFunction.OR)).get();

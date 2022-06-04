@@ -2,6 +2,7 @@ package net.chauhanDevs.advance_modder.core.init;
 
 import net.chauhanDevs.advance_modder.food;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,4 +13,6 @@ public class items {
             food.MOD_ID);
     public static final RegistryObject<BlockItem> PLATE = ITEM.register("plate",
             () -> new BlockItem(blocks.PLATE.get(), new BlockItem.Properties().tab(tabs.UTENSILS)));
+    public static final RegistryObject<BlockItem> TEST = ITEM.register("test",
+            () -> new BlockItem(blocks.TEST.get(), new Item.Properties().tab(CreativeModeTab.TAB_FOOD)));
 }

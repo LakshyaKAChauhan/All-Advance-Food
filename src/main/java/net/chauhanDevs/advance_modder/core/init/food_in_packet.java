@@ -19,5 +19,8 @@ public class food_in_packet {
             () -> new cottage_cheese_packet(blocks.COTTAGE_CHEESE_PACKET.get(), new cottage_cheese_packet.Properties().tab(CreativeModeTab.TAB_FOOD)));
 
     public static final RegistryObject<f_packet> FRENCH_FRIES = FIP.register("french_fries",
-            () -> new f_packet(blocks.FRENCH_FRIES.get(), new Item.Properties().food(new FoodProperties.Builder().build()).tab(CreativeModeTab.TAB_FOOD), empty_packets.E_FRENCH_FRIES_PACKET.get()));
+            () -> new f_packet(blocks.FRENCH_FRIES.get(), new Item.Properties()
+            		.food(new FoodProperties.Builder().build())
+            		.tab(CreativeModeTab.TAB_FOOD).stacksTo(1),
+            		empty_packets.E_FRENCH_FRIES_PACKET.get(), 2));
 }

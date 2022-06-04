@@ -6,5 +6,9 @@
   "block.advance_food.plate": "Plate",
 
   "itemGroup.f_items": "Food Items",
-  "itemGroup.utensils": "Utensils"
+  "itemGroup.utensils": "Utensils",
+  
+  "key.category.afc": "Advance Food Controls",
+  
+  "key.advance_food.eiipfpih": "Extract Item In Plate From Packet In Hand"
 }

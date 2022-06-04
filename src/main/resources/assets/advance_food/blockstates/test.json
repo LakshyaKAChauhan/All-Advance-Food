@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "lol=true": { "model": "advance_food:block/french_fries"},
+    "lol=false": { "model": "advance_food:block/e_french_fries_packet"}
+  }
+}
