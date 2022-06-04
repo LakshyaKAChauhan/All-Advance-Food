@@ -1,4 +1,4 @@
-!["LOGO"](cheese_burger.png)
+!["LOGO"](banner.png)
 # Wanna eat something tasty in Minecraft?  
 ## So This Mod maybe your solution
 By Installing this mod you will get different types of food items,  
